@@ -360,7 +360,7 @@ button:disabled{opacity:1;cursor:not-allowed;color:#5f5368;background:#e9e1ee;bo
 #main-preview .writing-surface{--court-primary:var(--plum);--court-muted:#665d70;--court-on-primary:var(--cream)}
 #main-white #post-context{margin-top:24px;padding-top:20px;border-top:1px solid var(--court-rule)}
 .court-dialog:has(#receipt-composition){max-width:500px}
-.court-dialog #receipt-composition{width:min(100%,280px);margin-inline:auto}
+.court-dialog #receipt-composition{width:min(100%,320px);margin-inline:auto}
 .court-dialog #receipt-composition .receipt-art{width:100%;height:auto;display:block}
-@media(max-width:760px){.court-public-post .work-heading,#main-preview .work-heading{grid-template-columns:1fr;gap:28px}.court-public-post .work-media,#main-preview .work-media{max-width:400px}.court-public-post .work-reading,#main-preview .work-reading{padding:20px}.court-dialog #receipt-composition{width:min(100%,240px)}}
+@media(max-width:760px){.court-public-post .work-heading,#main-preview .work-heading{grid-template-columns:1fr;gap:28px}.court-public-post .work-media,#main-preview .work-media{max-width:400px}.court-public-post .work-reading,#main-preview .work-reading{padding:20px}.court-dialog #receipt-composition{width:min(100%,280px)}}
 @media(prefers-reduced-motion:reduce){#drop-results .flip-card,#drop-results .flip-rotor{transition:none}}
