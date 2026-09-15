@@ -170,7 +170,7 @@ button:disabled{opacity:1;cursor:not-allowed;color:#5f5368;background:#e9e1ee;bo
 #main-court .court-content .managed-work details,#main-court .settings-section details{border:0;margin-top:20px;padding:0}
 #main-court .court-content .managed-work details>summary{font-size:14px;min-height:44px;padding:10px 0}
 #main-court .court-content details h3{margin-top:24px}
-#main-court .court-content details>h3:first-of-type{margin-top:0}
+#main-court .court-content details>summary+h3{margin-top:16px}
 #main-court .court-tabs{display:flex;align-items:center;gap:24px;margin:24px 0 0;padding:0;border:0;border-bottom:1px solid var(--court-rule)}
 #main-court .court-tabs a{display:inline-flex;align-items:center;min-height:44px;padding:11px 0;font-size:14px;font-weight:500;line-height:1.5;border:0;border-bottom:2px solid transparent;text-decoration:none;color:var(--court-muted)}
 #main-court .court-tabs a[aria-current]{border-bottom-color:var(--court-primary);color:var(--court-primary);font-weight:650}
@@ -327,8 +327,8 @@ button:disabled{opacity:1;cursor:not-allowed;color:#5f5368;background:#e9e1ee;bo
 /* One square-card rhythm; grow density only when the collection warrants it. */
 #drop-results{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;align-items:start}
 #drop-results .flip-card{aspect-ratio:1;transition:transform 220ms ease,box-shadow 220ms ease}
-#drop-results .flip-identity{height:72px;padding:10px 12px;gap:8px}
-#drop-results .flip-stage{bottom:72px}
+#drop-results .flip-identity{height:88px;padding:10px 12px;gap:8px}
+#drop-results .flip-stage{bottom:88px}
 #drop-results .flip-identity>div{padding-left:0;text-align:left}
 #drop-results .flip-identity h3{font-size:19px!important;line-height:1.2}
 #drop-results .flip-identity p{font-size:10px!important}
@@ -343,7 +343,7 @@ button:disabled{opacity:1;cursor:not-allowed;color:#5f5368;background:#e9e1ee;bo
 @media(hover:hover) and (prefers-reduced-motion:no-preference){#drop-results .flip-card:hover,#drop-results .flip-card:focus-within{transform:scale(1.035);box-shadow:0 12px 30px #0004;z-index:2}}
 @media(max-width:1050px){#drop-results{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}}
 @media(max-width:760px){#drop-results{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}#drop-results .flip-identity h3{font-size:16px!important}#drop-results .flip-summary{font-size:13px;-webkit-line-clamp:2}#drop-results .flip-back{padding:12px 12px 4px}#drop-results .flip-back .eyebrow{font-size:8px}}
-@media(max-width:420px){#drop-results{grid-template-columns:1fr;max-width:290px;margin-inline:auto}#drop-results .flip-summary{-webkit-line-clamp:4}#drop-results .flip-identity h3{font-size:20px!important}}
+@media(max-width:520px){#drop-results{grid-template-columns:1fr;max-width:290px;margin-inline:auto}#drop-results .flip-summary{-webkit-line-clamp:4}#drop-results .flip-identity h3{font-size:20px!important}}
 /* The familiar CleanPause page skeleton, shared by every post. */
 .court-public-post .work-heading,#main-preview .work-heading{grid-template-columns:minmax(0,1.2fr) minmax(240px,.8fr);gap:48px;margin-top:28px}
 .court-public-post .work-heading h1,#main-preview .work-heading h1{font-size:clamp(36px,5vw,64px);line-height:1.12;margin:16px 0 22px}
@@ -364,3 +364,16 @@ button:disabled{opacity:1;cursor:not-allowed;color:#5f5368;background:#e9e1ee;bo
 .court-dialog #receipt-composition .receipt-art{width:100%;height:auto;display:block}
 @media(max-width:760px){.court-public-post .work-heading,#main-preview .work-heading{grid-template-columns:1fr;gap:28px}.court-public-post .work-media,#main-preview .work-media{max-width:400px}.court-public-post .work-reading,#main-preview .work-reading{padding:20px}.court-dialog #receipt-composition{width:min(100%,280px)}}
 @media(prefers-reduced-motion:reduce){#drop-results .flip-card,#drop-results .flip-rotor{transition:none}}
+
+/* Keep prose headings, card captions and mobile footer actions clear of adjacent content. */
+#main-white #work-form>.minor{margin-bottom:24px}
+#main-white .submit-preview .flip-identity{height:88px}
+#main-white .submit-preview .flip-stage{bottom:88px}
+#main-white .submit-preview .flip-identity h3{font-size:20px!important;line-height:1.2}
+#drop-results[data-density=compact] .flip-summary{-webkit-line-clamp:2}
+#drop-results[data-density=compact] .flip-back{padding:12px 14px 8px;gap:5px}
+.site-footer{display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:center;gap:12px 24px}
+.site-footer>p{margin-right:auto}
+.site-footer>a{display:inline-flex;align-items:center;min-height:44px}
+@media(max-width:760px){.site-footer{gap:4px 20px}.site-footer>p{flex-basis:100%;margin:0 0 12px}.site-footer>a{margin:0;padding:8px 0}}
+.court-public-post .work-heading,#main-preview .work-heading{align-items:center}
