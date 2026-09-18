@@ -37,7 +37,7 @@
   if(window.top!==window.self)throw Error('FRAME_NOT_ALLOWED');
   if(![prod,review].includes(cfg.supabaseUrl)||!cfg.publishableKey||(cfg.supabaseUrl===prod&&location.origin!=='https://sidecourt.space')||(cfg.supabaseUrl===review&&location.origin!=='https://m1nga.github.io'))throw Error('CONFIGURATION_MISMATCH');
   $('environment').textContent=cfg.supabaseUrl===review?'REVIEW ENVIRONMENT — not your production works.':'SideCourt production';
-  $('endpoint').value=resource;$('copy').onclick=async()=>{try{await navigator.clipboard.writeText(resource);status('Connection address copied.');}catch{$('endpoint').focus();$('endpoint').select();status('Copy the selected connection address.');}};
+  $('endpoint').value=resource;$('cmd-claude').textContent='claude mcp add --transport http sidecourt '+resource;$('cmd-codex').textContent='codex mcp add sidecourt --url '+resource;$('copy').onclick=async()=>{try{await navigator.clipboard.writeText(resource);status('Connection address copied.');}catch{$('endpoint').focus();$('endpoint').select();status('Copy the selected connection address.');}};
   const params=new URLSearchParams(location.search);
   if(!params.has('client_id')){$('setup').hidden=false;status('Add this connection in your AI client to begin.');return;}
   if([...params.keys()].some(k=>params.getAll(k).length!==1))throw Error('INVALID_REQUEST');

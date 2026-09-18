@@ -5,22 +5,22 @@
 <meta name="referrer" content="no-referrer"><meta name="robots" content="noindex">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src https://rwbwfokdipabwjparcwy.supabase.co https://enoidjoytplapekhyxye.supabase.co; base-uri 'none'; form-action 'none'; object-src 'none'">
 <title>Connect your AI · SideCourt</title>
-<link rel="icon" href="favicon.svg"><link rel="stylesheet" href="court.css">
+<link rel="icon" href="favicon.svg"><link rel="stylesheet" href="court.css?v=b1f5c480bf07">
 <style>
 body.sc-connect-page{margin:0;background:#F6F1E8;color:#1A1A1A;font-family:Inter,system-ui,sans-serif;min-height:100vh;display:block}.sc-connect-page main{width:min(640px,calc(100% - 40px));margin:48px auto;padding-bottom:48px}.sc-connect-page h1{font-size:clamp(28px,5vw,42px);line-height:1.12;margin:24px 0 16px;color:#3F2E6B}.sc-connect-page p{line-height:1.65}.sc-connect-page .panel{border:1px solid #3F2E6B;border-radius:18px;padding:24px;margin:24px 0;background:transparent}.sc-connect-page button,.sc-connect-page select,.sc-connect-page input[type=text]{font:inherit;min-height:44px;border:1px solid #3F2E6B;border-radius:8px;padding:10px;max-width:100%}.sc-connect-page button{background:#3F2E6B;color:#F6F1E8;cursor:pointer;margin:8px 8px 8px 0}.sc-connect-page button:disabled{opacity:.45;cursor:not-allowed}.sc-connect-page a{color:#3F2E6B;text-decoration:underline}.sc-connect-page label{display:block;margin:12px 0;line-height:1.6}.sc-connect-page input[type=checkbox]{width:20px;height:20px;vertical-align:middle;margin-right:8px;accent-color:#3F2E6B}.sc-connect-page select,.sc-connect-page input[type=text]{width:100%;box-sizing:border-box;background:#F6F1E8;color:#1A1A1A}.sc-connect-page fieldset{border:0;margin:0;padding:0}.sc-connect-page .small{font-size:14px}.sc-connect-page [hidden]{display:none!important}.sc-connect-page :focus-visible{outline:3px solid #3F2E6B;outline-offset:3px}
 </style>
-<script src="config.js" defer></script><script src="connect.js" defer></script>
-</head>
+<script src="config.js?v=954787739b1d" defer></script><script src="connect.js?v=2b587a0cdc36" defer></script>
+<meta name="robots" content="noindex,nofollow"><style>.review-site-label{position:relative;z-index:100;background:#43316f;color:#f6f1e8;text-align:center;padding:8px 16px;font:500 12px/1.5 Inter,Arial,sans-serif}.review-site-label a{color:inherit}</style></head>
 <body class="sc-connect-page"><main>
 <a href="./" aria-label="SideCourt home"><img src="favicon.svg" width="64" height="64" alt="SideCourt"></a>
 <h1 id="heading">Connect your AI.</h1>
-<p id="intro">Bring one SideCourt work into ChatGPT or Claude. You choose the permissions and when access ends.</p>
+<p id="intro">Bring one SideCourt work into ChatGPT, Claude, Claude Code or Codex. You choose the permissions and when access ends.</p>
 <p id="environment" class="small"></p>
 <section id="setup" class="panel" hidden>
 <h2>Your connection address</h2>
 <label for="endpoint">Remote MCP server URL</label><input id="endpoint" type="text" readonly spellcheck="false"><button id="copy" type="button">Copy address</button>
-<p>In ChatGPT, open Plugins and add a custom MCP connection. In Claude, open Customize → Connectors → Add custom connector. Use this address, then choose Connect.</p>
-<p>You will return here to sign in and approve one work. No API key, client secret, local command, or new account is needed. Availability depends on your AI account and workspace settings.</p>
+<p>ChatGPT: Settings → Connectors → Create, paste this address and choose OAuth. Claude: Customize → Connectors → Add custom connector. Claude Code: <code id="cmd-claude"></code> then <code>/mcp</code> → Authenticate. Codex: <code id="cmd-codex"></code> then <code>codex mcp login sidecourt</code>.</p>
+<p>You will return here to sign in and approve one work. No API key, client secret or new account is needed. Availability depends on your AI account and workspace settings.</p>
 <p class="small">This is a private custom connection, not a claim of public marketplace approval.</p>
 </section>
 <section id="consent" class="panel" hidden>
